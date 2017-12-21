@@ -1,6 +1,6 @@
 FROM php:7.1.12-fpm-jessie
 MAINTAINER jieyang <admin@jevic.cn>
-ENV EFRESHED_AT 2017-12-20
+ENV EFRESHED_AT 2017-12-21
 
 ENV TZ=Asia/Shanghai
 
@@ -8,13 +8,13 @@ RUN set -xe \
     && echo "构建依赖" \
     && buildDeps=" \
         build-essential \
-        php5-dev \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
         libpng12-dev" \
     && echo "运行依赖" \
     && runtimeDeps=" \
+        libssl-dev \
         libfreetype6 \
         libjpeg62-turbo \
         libmcrypt4 \
